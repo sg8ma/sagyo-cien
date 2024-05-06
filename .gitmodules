@@ -2,3 +2,8 @@
 	path = markdown
 	url = git@github.com:sg8ma/sagyocien-markdown.git
     ignore = dirty
+
+[submodule "contents"]
+	path = contents
+	url = git@github.com:sg8ma/sagyo-cien-contents.git
+    ignore = dirty
