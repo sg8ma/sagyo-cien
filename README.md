@@ -1,12 +1,10 @@
 # Sagyo-cien
 
-Sagyo-cien(サギョウシエン)は[Sugiyama](https://github.com/sg8ma)によるサイトで作品や技術記事をまとめています。
+Sagyo-cien is a website by [Sugiyama](https://github.com/sg8ma) that compiles artworks and technical articles.
 
-## コマンドリスト
+## Testing the Site
 
-### 試験用サイト
-
-以下のコマンドでテスト用サイトを立ち上げることができます。
+You can launch a test site with the following commands:
 
 ```bash
 git clone git@github.com:sg8ma/sagyo-cien.git
@@ -15,17 +13,10 @@ npm install
 npm run dev
 ```
 
-### デプロイの流れ
+## Deploy
 
-以下のコマンドでhtmlファイルを生成します。
+Generate the HTML files with the following command:
 
 ```bash
 npm run build
 ```
-
-生成したhtmlファイルをアップロードします。
-
-commingsoon
-
-
-
