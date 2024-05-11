@@ -5,36 +5,36 @@ import { UiConf } from '@/constants/uiconf';
 import profile from '@/public/images/profile.jpg'
 
 interface Props {
-    currentPage?: string,
+    currentMenu?: string,
 }
 
 export const Header = ({
-    currentPage,
+    currentMenu,
   }: Props) => {
     var theme = {};
-    if(currentPage == 'about')
-        theme = {color: UiConf.badge.about}
-    else if(currentPage == 'works')
-        theme = {color: UiConf.badge.works}
-    else if(currentPage == 'lab')
-        theme = {color: UiConf.badge.lab}
-    else if(currentPage == 'report')
-        theme = {color: UiConf.badge.report}
-    else if(currentPage == 'devlog')
-        theme = {color: UiConf.badge.devlog}
-    else if(currentPage == 'article')
-        theme = {color: UiConf.badge.article}
-    else if(currentPage == 'blog')
-        theme = {color: UiConf.badge.blog}
+    if(currentMenu == 'about')
+        theme = {color: UiConf.info.regular}
+    else if(currentMenu == 'works')
+        theme = {color: UiConf.works.regular}
+    else if(currentMenu == 'lab')
+        theme = {color: UiConf.lab.regular}
+    else if(currentMenu == 'report')
+        theme = {color: UiConf.report.regular}
+    else if(currentMenu == 'devlog')
+        theme = {color: UiConf.devlog.regular}
+    else if(currentMenu == 'article')
+        theme = {color: UiConf.article.regular}
+    else if(currentMenu == 'blog')
+        theme = {color: UiConf.blog.regular}
     return (
         <>
             <SAside>
                 <SAsideContent>
-                <SProfile>Profile</SProfile>
+                <SProfile theme={theme}>Profile</SProfile>
                 <SProfileOverview >
                     <SProfileImg src={'/images/profile.jpg'}></SProfileImg>
                     <div>
-                        <SProfileId>@sg8ma</SProfileId>
+                        <SProfileId theme={theme}>@sg8ma</SProfileId>
                         <SProfileJob>Webエンジニア</SProfileJob>
                     </div>
                 </SProfileOverview>
@@ -42,7 +42,7 @@ export const Header = ({
                 都内でWebサービスを作るフロントエンド兼バックエンドエンジニアです。
                 新規Webサービスの爆速立ち上げや、使いやすいSPAの開発が得意です。
                 </SProfileDetail>
-                <SPickupTitle>Ads</SPickupTitle>
+                <SPickupTitle theme={theme}>Ads</SPickupTitle>
                 {/* <SPickupContent>
                     <SPickupTag>#php</SPickupTag>
                     <SPickupTag>#markdown</SPickupTag>
@@ -76,17 +76,30 @@ const SAsideContent = styled.div`
 
 const SProfile = styled.div`
     font-size: 24px;
-    color: ${UiConf.badge.devlog};
+    color: ${({theme}) => theme.color};
     // color: #222;
     // margin-top: 40px;
 `;
 
+SProfile.defaultProps = {
+    theme: {
+        color: '#000'
+    }
+}
+
 const SPickupTitle = styled.div`
     font-size: 24px;
-    color: ${UiConf.badge.devlog};
+    color: ${({theme}) => theme.color};
     margin-top: 32px;
     margin-bottom: 8px;
 `;
+
+
+SProfile.defaultProps = {
+    theme: {
+        color: '#000'
+    }
+}
 
 const SPickupContent = styled.div`
     display: flex;
@@ -106,7 +119,7 @@ const SPickupTag = styled.div`
 
 const SAdsTitle = styled.div`
     font-size: 24px;
-    color: ${UiConf.badge.devlog};
+    color: ${UiConf.devlog.regular};
     margin-top: 32px;
     margin-bottom: 12px;
 `;
@@ -132,8 +145,14 @@ const SProfileImg = styled.img`
 
 const SProfileId = styled.div`
     font-size: 17px;
-    color: ${UiConf.badge.devlog};
+    color: ${({theme}) => theme.color};
 `
+
+SProfileId.defaultProps = {
+    theme: {
+        color: '#000'
+    }
+}
 
 const SProfileJob = styled.div`
     font-size: 15px;

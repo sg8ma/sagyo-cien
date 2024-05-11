@@ -1,11 +1,12 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coldarkDark, vscDarkPlus, oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { CodeComponent } from 'react-markdown/lib/ast-to-react'
-import FullImage from '@/components/atoms/FullImage';
-import Image from '@/components/atoms/Image';
-import LinkCard from '@/components/atoms/LinkCard';
-import LinkText from '@/components/atoms/LinkText';
-import Youtube from '@/components/atoms/Youtube';
+import FullImage from '@/components/elements/FullImage';
+import Image from '@/components/elements/Image';
+import LinkCard from '@/components/elements/LinkCard';
+import LinkText from '@/components/elements/LinkText';
+import Youtube from '@/components/elements/Youtube';
+import Badge from '@/components/elements/Badge';
 
 const CodeBlock: CodeComponent = ({ inline, className, children }) => {
     if (inline) {
@@ -13,17 +14,17 @@ const CodeBlock: CodeComponent = ({ inline, className, children }) => {
     }
     const match = /language-(\w+)/.exec(className || "");
     const param = match && match[1] ? match[1] : "";
-    if(param == 'sa-link-text') {
+    console.log(param);
+    if(param == 'sa_link_text') {
         return (
             <LinkText
-                menu={''}
-                title={''}
-                category={''}
-                slug={''}
+                menu={'devlog'}
+                category={'MarkdownTest'}
+                slug={'test'}
             />
         );
     }
-    else if(param == 'sa-link-card') {
+    else if(param == 'sa_link_card') {
         return (
             <LinkCard
                 menu={''}
@@ -33,14 +34,22 @@ const CodeBlock: CodeComponent = ({ inline, className, children }) => {
             />
         );
     }
-    else if(param == 'sa-youtube') {
+    else if(param == 'sa_youtube') {
         return (
             <Youtube
                 url={''}
             />
         );
     }
-    else if(param == 'sa-full-image') {
+    else if(param == 'sa_full_image') {
+        return (
+            <FullImage
+                url={''}
+                alt={''}
+            />
+        );
+    }
+    else if(param == 'sa_image') {
         return (
             <Image
                 url={''}
@@ -48,11 +57,10 @@ const CodeBlock: CodeComponent = ({ inline, className, children }) => {
             />
         );
     }
-    else if(param == 'sa-image') {
+    else if(param == 'badge') {
         return (
-            <FullImage
-                url={''}
-                alt={''}
+            <Badge
+                menu={String(children).replace(/\n$/, '')}
             />
         );
     }

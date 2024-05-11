@@ -1,9 +1,6 @@
-[submodule "markdown"]
-	path = markdown
-	url = git@github.com:sg8ma/sagyocien-markdown.git
-    ignore = dirty
-
-[submodule "data"]
-	path = data
-	url = git@github.com:sg8ma/sagyo-cien-data.git
-    ignore = dirty
+[submodule "public/md"]
+	path = public/md
+	url = git@github.com:sg8ma/sagyo-cien-md.git
+[submodule "private/md"]
+	path = private/md
+	url = git@github.com:sg8ma/sagyo-cien-md-priv.git

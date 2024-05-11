@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faYoutube, faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { UiConf } from '@/constants/uiconf';
 import Menu from '@/components/templates/Menu';
+import Link from 'next/link'
 
 interface Props {
     currentPage?: string,
@@ -14,25 +15,25 @@ export const Header = ({
   }: Props) => {
     var theme = {};
     if(currentPage == 'about')
-        theme = {color: UiConf.badge.about}
+        theme = {color: UiConf.info.regular}
     else if(currentPage == 'works')
-        theme = {color: UiConf.badge.works}
+        theme = {color: UiConf.works.regular}
     else if(currentPage == 'lab')
-        theme = {color: UiConf.badge.lab}
+        theme = {color: UiConf.lab.regular}
     else if(currentPage == 'report')
-        theme = {color: UiConf.badge.report}
+        theme = {color: UiConf.report.regular}
     else if(currentPage == 'devlog')
-        theme = {color: UiConf.badge.devlog}
+        theme = {color: UiConf.devlog.regular}
     else if(currentPage == 'article')
-        theme = {color: UiConf.badge.article}
+        theme = {color: UiConf.article.regular}
     else if(currentPage == 'blog')
-        theme = {color: UiConf.badge.blog}
+        theme = {color: UiConf.blog.regular}
     return (
         <>
         <SHeaderWrap>
-            <SHeader>
+            <SHeader theme={theme}>
                 <SLeftArea theme={theme}>
-                    <strong>Sagyo-cien</strong>
+                <Link href={`/`}><strong>Sagyo-cien</strong></Link>
                 </SLeftArea>
 
                 <SRightArea>
@@ -61,10 +62,16 @@ const SHeader = styled.div`
     height: 64px;
     // background-color: #ffffff;
     // background: linear-gradient(45deg, #222 50%, #444);
-    background-color: ${UiConf.badge.devlog};
+    background-color: ${({theme}) => theme.color};
     display: flex;
     justify-content: space-between;
 `;
+
+SHeader.defaultProps = {
+    theme: {
+        color: '#000'
+    }
+}
 
 const SLeftArea = styled.div`
     margin: 16px 16px;

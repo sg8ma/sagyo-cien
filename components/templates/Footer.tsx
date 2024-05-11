@@ -11,19 +11,19 @@ export const Footer = ({
   }: Props) => {
     var theme = {};
     if(currentPage == 'about')
-        theme = {color: UiConf.badge.about}
+        theme = {color: UiConf.info.regular}
     else if(currentPage == 'works')
-        theme = {color: UiConf.badge.works}
+        theme = {color: UiConf.works.regular}
     else if(currentPage == 'lab')
-        theme = {color: UiConf.badge.lab}
+        theme = {color: UiConf.lab.regular}
     else if(currentPage == 'report')
-        theme = {color: UiConf.badge.report}
+        theme = {color: UiConf.report.regular}
     else if(currentPage == 'devlog')
-        theme = {color: UiConf.badge.devlog}
+        theme = {color: UiConf.devlog.regular}
     else if(currentPage == 'article')
-        theme = {color: UiConf.badge.article}
+        theme = {color: UiConf.article.regular}
     else if(currentPage == 'blog')
-        theme = {color: UiConf.badge.blog}
+        theme = {color: UiConf.blog.regular}
     return (
         <>
         <SFooterWrap theme={theme}>
@@ -53,14 +53,7 @@ const SFooterWrap = styled.footer`
     position: absolute;
     bottom: 0;
     width: 100%;
-    // height: 120px;
 `;
-
-SFooterWrap.defaultProps = {
-    theme: {
-        color: "#222"
-    }
-}
 
 const SFooter = styled.div`
     text-align: center;

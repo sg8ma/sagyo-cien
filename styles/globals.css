@@ -25,6 +25,11 @@ pre, code {
   font-family: "Inconsolata", Consolas !important;
 }
 
+pre div, pre label {
+  margin: 0;
+  font-family:  "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+} 
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

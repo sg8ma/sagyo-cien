@@ -15,31 +15,31 @@ import {
 import { NextDataPathnameNormalizer } from 'next/dist/server/future/normalizers/request/next-data';
 
 interface Props {
-    currentPage?: string,
+    currentMenu: string,
     currentCategory: string,
     contents: any,
 }
 
 export const SideIndex = ({
-    currentPage,
+    currentMenu,
     currentCategory,
     contents,
   }: Props) => {
     var theme = {};
-    if(currentPage == 'about')
-        theme = {color: UiConf.badge.about}
-    else if(currentPage == 'works')
-        theme = {color: UiConf.badge.works}
-    else if(currentPage == 'lab')
-        theme = {color: UiConf.badge.lab}
-    else if(currentPage == 'report')
-        theme = {color: UiConf.badge.report}
-    else if(currentPage == 'devlog')
-        theme = {color: UiConf.badge.devlog}
-    else if(currentPage == 'article')
-        theme = {color: UiConf.badge.article}
-    else if(currentPage == 'blog')
-        theme = {color: UiConf.badge.blog}
+    if(currentMenu == 'about')
+        theme = {color: UiConf.info.regular}
+    else if(currentMenu == 'works')
+        theme = {color: UiConf.works.regular}
+    else if(currentMenu == 'lab')
+        theme = {color: UiConf.lab.regular}
+    else if(currentMenu == 'report')
+        theme = {color: UiConf.report.regular}
+    else if(currentMenu == 'devlog')
+        theme = {color: UiConf.devlog.regular}
+    else if(currentMenu == 'article')
+        theme = {color: UiConf.article.regular}
+    else if(currentMenu == 'blog')
+        theme = {color: UiConf.blog.regular}
     const categories: string[] = [...new Set(contents.map((content: any) => content.category))];
     const sideIndexes = () => {
         var data: { category: string, posts: { url: string, title: string }[] }[] = [];
@@ -48,7 +48,7 @@ export const SideIndex = ({
             contents.forEach((content: any, j: number) => {
                 if (category === content.frontmatter.category) {
                     var postsItem = {
-                        url: `/${currentPage}/${content.frontmatter.category}/${content.slug}`,
+                        url: `/${currentMenu}/${content.frontmatter.category}/${content.slug}`,
                         title: content.frontmatter.title
                     };
                     categoryData.posts.push(postsItem);
@@ -58,45 +58,64 @@ export const SideIndex = ({
         });
         return data;
     }
+    function capitalize(str: string) 
+    {
+        if (typeof str !== 'string' || str.length === 0) {
+          return '';
+        }
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
     return (
         <>
-            <SAside>
+            <SAside theme={theme}>
                 <SAsideContent>
-                <Accordion allowZeroExpanded preExpanded={[currentCategory]}>
-                    {sideIndexes().map((content: any, index: number) => {
-                        return (
-                        <AccordionItem uuid={content.category}>
-                            <AccordionItemHeading>
-                                <SAccordionItemButton>
-                                {content.category}
-                                </SAccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel>
-                                <div className="menuWrap">
-                                {content.posts.map((post: any, index: number) => (    
-                                    <SAccordionSubItemButton href={post.url}>{post.title}</SAccordionSubItemButton>
-                                ))}
-                                </div>
-                            </AccordionItemPanel>
-                        </AccordionItem>
-                        )
-                      })}
-                </Accordion>
+                    <SIndex>
+                    <Link href={`/${currentMenu}`}>Index</Link>
+                    </SIndex>
+                    <Accordion allowZeroExpanded preExpanded={[currentCategory]}>
+                        {sideIndexes().map((content: any, index: number) => {
+                            return (
+                            <AccordionItem uuid={content.category}>
+                                <AccordionItemHeading>
+                                    <SAccordionItemButton>
+                                    {content.category}
+                                    </SAccordionItemButton>
+                                </AccordionItemHeading>
+                                <AccordionItemPanel>
+                                    <div className="menuWrap">
+                                    {content.posts.map((post: any, index: number) => (    
+                                        <SAccordionSubItemButton href={post.url}>{post.title}</SAccordionSubItemButton>
+                                    ))}
+                                    </div>
+                                </AccordionItemPanel>
+                            </AccordionItem>
+                            )
+                        })}
+                    </Accordion>
                 </SAsideContent>
             </SAside>
         </>
     );
 }
 
+const SIndex = styled.div`
+    padding: 12px 4px 4px 16px;
+`
 
 const SAside = styled.aside`
     position: relative;
-    background-color: ${UiConf.badge.devlog};
+    background-color: ${({theme}) => theme.color};
     color: #ffffff;
     width: 320px;
     max-width: 320px;
     z-index: 1;
 `;
+
+SAside.defaultProps = {
+    theme: {
+        color: '#000'
+    }
+}
 
 const SAsideContent = styled.div`
     position: sticky;
@@ -105,14 +124,14 @@ const SAsideContent = styled.div`
 `
 
 const SAccordionItemButton = styled(AccordionItemButton)`
-    font-size: 19px;
-    padding: 20px 0 20px 15px;
+    font-size: 18px;
+    padding: 12px 16px 12px 16px;
 `
 
 const SAccordionSubItemButton = styled.a`
     display: block;
     font-size: 16px;
-    padding: 8px 0 8px 20px;
+    padding: 8px 20px 8px 20px;
     background-color: ${UiConf.devlog.light};
 `
 

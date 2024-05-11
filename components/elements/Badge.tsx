@@ -1,19 +1,16 @@
 import styled from "styled-components"
 import { UiConf } from '@/constants/uiconf';
+import matter from "gray-matter"
+import { useState, useEffect } from 'react';
 
 interface Props {
     menu?: string,
-    category?: string,
-    title?: string,
-    slug?: string,
 }
 
-export const LinkText = ({
-    menu,
-    category,
-    title,
-    slug
+export const Badge = ({
+    menu
   }: Props) => {
+
     var theme = {};
     if(menu == 'about')
         theme = {color: UiConf.info.regular}
@@ -31,11 +28,28 @@ export const LinkText = ({
         theme = {color: UiConf.blog.regular}
     return (
         <>
-            <div>LinkText</div>
+            
+            <div>
+                <SBadge theme={theme}>{menu}</SBadge>
+            </div>
         </>
     );
 }
 
+const SBadge = styled.label`
+    display: inline;
+    background:${({theme}) => theme.color};
+    font-size: 12px;
+    padding: 1px 18px;
+    margin-right: 12px;
+    color: white;
+    border-radius: 4px;
+`;
 
+SBadge.defaultProps = {
+    theme: {
+        color: '#000'
+    }
+}
 
-export default LinkText
+export default Badge

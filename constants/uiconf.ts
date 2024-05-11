@@ -1,40 +1,48 @@
 export const UiConf = {
     works: {
-        regular: '',
+        regular: '#51C6A0',
         light: '',
         dark: '',
     },
     report: {
-        regular: '',
+        regular: '#FF9C69',
         light: '',
         dark: '',
     },
     lab: {
-        regular: '',
+        regular: '#E3D442',
         light: '',
         dark: '',
     },
     devlog: {
-        regular: '#598dc3',
-        light: '#80C0E0',
-        dark: '#1B8AC1',
+        regular: '#4FB2BC',
+        regular_hover: '#6998c9',
+        light: '#7aa3cf',
+        light_hover: '#8aafd5',
+        dark: '#47709c',
     },
     article: {
-        regular: '',
+        regular: '#E3BE42',
         light: '',
         dark: '',
     },
     blog: {
-        regular: '',
+        regular: '#7CE140',
         light: '',
         dark: '',
     },
     info: {
-        regular: '',
+        regular: '#287aac',
         light: '',
         dark: '',
     },
-
+    //////////////////////////////////////////////// 
+    //////////////////////////////////////////////// 
+    //////////////////////////////////////////////// 
+    //////////////////////////////////////////////// 
+    //////////////////////////////////////////////// 
+    //////////////////////////////////////////////// 
+    //////////////////////////////////////////////// 
     badge: {
         about: '#87b5d1',
         works: '#3bc0ce',

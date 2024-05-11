@@ -18,44 +18,44 @@ export const Menu = ({
                 <ul>
                     {/* <li>
                     {(currentPage == 'about') ? 
-                        <SLink href={`/about`} theme={{color: UiConf.badge.about}}><SFontAwesomeIcon icon={faCircleInfo} />About</SLink>:
+                        <SLink href={`/about`} theme={{color: UiConf.info.regular}}><SFontAwesomeIcon icon={faCircleInfo} />About</SLink>:
                         <SLink href={`/about`} ><SFontAwesomeIcon icon={faCircleInfo} />About</SLink>   
                     }
                     </li> */}
                     <li>
                     {(currentPage == 'works') ? 
-                        <SLink href={`/works`} theme={{color: UiConf.badge.works}}><SFontAwesomeIcon icon={faDiceD20} />Works</SLink>:
+                        <SLink href={`/works`} theme={{color: UiConf.works.regular}}><SFontAwesomeIcon icon={faDiceD20} />Works</SLink>:
                         <SLink href={`/works`}><SFontAwesomeIcon icon={faDiceD20} />Works</SLink>
                     }
                     </li>
                     <li>
                     {(currentPage == 'report') ? 
-                        <SLink href={`/report`} theme={{color: UiConf.badge.report}}><SFontAwesomeIcon icon={faFileLines} />Report</SLink>:
+                        <SLink href={`/report`} theme={{color: UiConf.report.regular}}><SFontAwesomeIcon icon={faFileLines} />Report</SLink>:
                         <SLink href={`/report`}><SFontAwesomeIcon icon={faFileLines} />Report</SLink>
                     }
                     </li>
                     <li>
                     {(currentPage == 'lab') ? 
-                        <SLink href={`/lab`} theme={{color: UiConf.badge.lab}}><SFontAwesomeIcon icon={faFlask} />Lab</SLink>:
-                        <SLink href={`/lab`}><SFontAwesomeIcon icon={faFlask} />Lab</SLink>
+                        <SLink href={`/lab`} theme={{color: UiConf.lab.regular}}><SFontAwesomeIcon icon={faFlask} />Labs</SLink>:
+                        <SLink href={`/lab`}><SFontAwesomeIcon icon={faFlask} />Labs</SLink>
                     }
                     </li>
-                    {/* <li><SLink href={`/lab`}><SFontAwesomeIcon icon={faFlask} />Lab</SLink></li> */}
+                    {/* <li><SLink href={`/lab`}><SFontAwesomeIcon icon={faFlask} />Labs</SLink></li> */}
                     <li>
                     {(currentPage == 'devlog') ? 
-                        <SLink href={`/devlog`} theme={{color: UiConf.badge.devlog}}><SFontAwesomeIcon icon={faBookTanakh} />Devlog</SLink>:
+                        <SLink href={`/devlog`} theme={{color: UiConf.devlog.regular}}><SFontAwesomeIcon icon={faBookTanakh} />Devlog</SLink>:
                         <SLink href={`/devlog`}><SFontAwesomeIcon icon={faBookTanakh} />Devlog</SLink>
                     }
                     </li>
                     <li>
                     {(currentPage == 'article') ? 
-                        <SLink href={`/article`} theme={{color: UiConf.badge.article}}><SFontAwesomeIcon icon={faNewspaper} />Article</SLink>:
+                        <SLink href={`/article`} theme={{color: UiConf.article.regular}}><SFontAwesomeIcon icon={faNewspaper} />Article</SLink>:
                         <SLink href={`/article`}><SFontAwesomeIcon icon={faNewspaper} />Article</SLink>
                     }
                     </li>
                     <li>
                     {(currentPage == 'blog') ? 
-                        <SLink href={`/blog`} theme={{color: UiConf.badge.blog}}><SFontAwesomeIcon icon={faPenNib} />Blog</SLink>:
+                        <SLink href={`/blog`} theme={{color: UiConf.blog.regular}}><SFontAwesomeIcon icon={faPenNib} />Blog</SLink>:
                         <SLink href={`/blog`}><SFontAwesomeIcon icon={faPenNib} />Blog</SLink>
                     }
                     </li>

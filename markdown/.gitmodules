@@ -1,4 +1,0 @@
-[submodule "private"]
-	path = private
-	url = git@github.com:sg8ma/sagyocien-markdown-private.git
-    ignore = dirty
