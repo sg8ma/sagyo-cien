@@ -1,6 +1,3 @@
 [submodule "public/md"]
 	path = public/md
 	url = git@github.com:sg8ma/sagyo-cien-md.git
-[submodule "private/md"]
-	path = private/md
-	url = git@github.com:sg8ma/sagyo-cien-md-priv.git

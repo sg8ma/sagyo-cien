@@ -17,7 +17,7 @@ export const LinkText = ({
     const [document, setDocument] = useState(null);
     useEffect(() => {
       async function loadMarkdown() {
-        const data = await import(`/private/md/article/${category}/${slug}.md`);
+        const data = await import(`/tests/md/article/${category}/${slug}.md`);
         const doc = matter(data.default);
         setDocument(doc);
       }
