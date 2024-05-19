@@ -1,14 +1,14 @@
-# Sagyo-cien
+# Sashiatari
 
-Sagyo-cien is a website by [Sugiyama](https://github.com/sg8ma) that compiles artworks and technical articles.
+Sashiatari is a website by [sg8ma](https://github.com/sg8ma) that compiles  articles.
 
 ## Testing the Site
 
 You can launch a test site with the following commands:
 
 ```bash
-git clone git@github.com:sg8ma/sagyo-cien.git
-cd sagyo-cien
+git clone git@github.com:sg8ma/sashiatari.git
+cd sashiatari
 npm install 
 npm run dev
 ```

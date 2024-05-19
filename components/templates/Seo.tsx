@@ -18,9 +18,9 @@ const Seo = ({
     pageImgHeight,
   }: SeoProps) => {
     const router = useRouter();
-    const siteUrl = 'https://sagyo-cien.com';
+    const siteUrl = 'https://daichisugiyama.com';
     const url = `${siteUrl}${router.asPath}`;
-    const defaultTitle = 'Sagyo-cien'
+    const defaultTitle = 'サシアタリ'
     const defaultDescription = ''
     const title = pageTitle ? `${pageTitle} / ${defaultTitle}` : defaultTitle
     const description = pageDescription ? pageDescription : defaultDescription

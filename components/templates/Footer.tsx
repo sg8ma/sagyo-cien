@@ -31,7 +31,7 @@ export const Footer = ({
                 <SAds>
                 <img src="https://placehold.jp/600x200.png"></img>
                 </SAds>
-                <SCopyright>© 2024 Sagyo-cien <p style={{'color': '#c8c8c8'}}></p></SCopyright>
+                <SCopyright>© 2024 Sashiatari <p style={{'color': '#c8c8c8'}}></p></SCopyright>
             </SFooter>
         </SFooterWrap>
         </>

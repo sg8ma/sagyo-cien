@@ -30,35 +30,35 @@ export const Menu = ({
                     </li>
                     <li>
                     {(currentPage == 'report') ? 
-                        <SLink href={`/report`} theme={{color: UiConf.report.regular}}><SFontAwesomeIcon icon={faFileLines} />Report</SLink>:
-                        <SLink href={`/report`}><SFontAwesomeIcon icon={faFileLines} />Report</SLink>
+                        <SLink href={`/report`} theme={{color: UiConf.report.regular}}><SFontAwesomeIcon icon={faFileLines} />Analysis</SLink>:
+                        <SLink href={`/report`}><SFontAwesomeIcon icon={faFileLines} />Analysis</SLink>
                     }
                     </li>
                     <li>
                     {(currentPage == 'lab') ? 
-                        <SLink href={`/lab`} theme={{color: UiConf.lab.regular}}><SFontAwesomeIcon icon={faFlask} />Labs</SLink>:
-                        <SLink href={`/lab`}><SFontAwesomeIcon icon={faFlask} />Labs</SLink>
+                        <SLink href={`/lab`} theme={{color: UiConf.lab.regular}}><SFontAwesomeIcon icon={faFlask} />Lab</SLink>:
+                        <SLink href={`/lab`}><SFontAwesomeIcon icon={faFlask} />Lab</SLink>
                     }
                     </li>
                     {/* <li><SLink href={`/lab`}><SFontAwesomeIcon icon={faFlask} />Labs</SLink></li> */}
                     <li>
                     {(currentPage == 'devlog') ? 
-                        <SLink href={`/devlog`} theme={{color: UiConf.devlog.regular}}><SFontAwesomeIcon icon={faBookTanakh} />Devlog</SLink>:
-                        <SLink href={`/devlog`}><SFontAwesomeIcon icon={faBookTanakh} />Devlog</SLink>
+                        <SLink href={`/devlog`} theme={{color: UiConf.devlog.regular}}><SFontAwesomeIcon icon={faBookTanakh} />Dev</SLink>:
+                        <SLink href={`/devlog`}><SFontAwesomeIcon icon={faBookTanakh} />Dev</SLink>
                     }
                     </li>
                     <li>
                     {(currentPage == 'article') ? 
-                        <SLink href={`/article`} theme={{color: UiConf.article.regular}}><SFontAwesomeIcon icon={faNewspaper} />Article</SLink>:
-                        <SLink href={`/article`}><SFontAwesomeIcon icon={faNewspaper} />Article</SLink>
+                        <SLink href={`/article`} theme={{color: UiConf.article.regular}}><SFontAwesomeIcon icon={faNewspaper} />Methods</SLink>:
+                        <SLink href={`/article`}><SFontAwesomeIcon icon={faNewspaper} />Methods</SLink>
                     }
                     </li>
-                    <li>
+                    {/* <li>
                     {(currentPage == 'blog') ? 
                         <SLink href={`/blog`} theme={{color: UiConf.blog.regular}}><SFontAwesomeIcon icon={faPenNib} />Blog</SLink>:
                         <SLink href={`/blog`}><SFontAwesomeIcon icon={faPenNib} />Blog</SLink>
                     }
-                    </li>
+                    </li> */}
 
                 </ul>
             </SNavi>

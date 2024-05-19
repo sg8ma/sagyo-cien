@@ -8,7 +8,7 @@ export default function Document() {
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href='' />
           <link rel="apple-touch-icon" href='' />
-          <title key="title">SagyoCien</title>
+          <title key="title">サシアタリ</title>
           <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet"/>
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com"/>

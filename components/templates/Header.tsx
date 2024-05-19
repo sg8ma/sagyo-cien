@@ -33,7 +33,7 @@ export const Header = ({
         <SHeaderWrap>
             <SHeader theme={theme}>
                 <SLeftArea theme={theme}>
-                <Link href={`/`}><strong>Sagyo-cien</strong></Link>
+                <Link href={`/`}><strong>サシアタリ</strong></Link>
                 </SLeftArea>
 
                 <SRightArea>
