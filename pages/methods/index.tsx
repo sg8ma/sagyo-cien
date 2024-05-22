@@ -8,10 +8,10 @@ interface Props {
 }
 
 export const CollectionPage = (props: Props) => {
-    const currentMenu = 'devlog';
+    const currentMenu = 'methods';
     const currentCategory = '';
-    const pageTitle = 'Devlog';
-    const pageDescription = '開発における設計、実装、環境構築のログ';
+    const pageTitle = 'Methods';
+    const pageDescription = '方法論';
     return (
         <Collection 
             currentMenu={currentMenu}
@@ -25,7 +25,7 @@ export const CollectionPage = (props: Props) => {
 export default CollectionPage
 
 export async function getStaticProps() {
-    const context = require.context('/tests/md/devlog/', true, /\.md$/)
+    const context = require.context('/tests/md/methods/', true, /\.md$/)
     const contents = ((context) => {
         const keys = context.keys()
         const values = keys.map(context)

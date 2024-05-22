@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const SinglePage = (props: Props) => {
-    const currentMenu = 'article';
+    const currentMenu = 'dev';
     const pageTitle = props.frontmatter.title;
     const pageDescription = props.frontmatter.summary;
     return (
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
             return slugs
         })
         return data
-    })(require.context('/tests/md/article/', true, /\.md$/));
+    })(require.context('/tests/md/dev/', true, /\.md$/));
     const paths = content.map((slugs) => ({
         params: {
           category: slugs[0],
@@ -58,7 +58,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
         category: string;
         slug: string;
     };
-    const data = await import(`/tests/md/article/${category}/${slug}.md`)
+    const data = await import(`/tests/md/dev/${category}/${slug}.md`)
     const document = matter(data.default)
 
     //allpage
@@ -77,7 +77,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
             }
         })
         return data
-    })(require.context('/tests/md/article/', true, /\.md$/))
+    })(require.context('/tests/md/dev/', true, /\.md$/))
     const sortingContents = contents.sort((a, b) => {
         return b.frontmatter.created_at - a.frontmatter.created_at
     });

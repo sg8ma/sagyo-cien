@@ -14,20 +14,16 @@ export const Header = ({
     currentPage,
   }: Props) => {
     var theme = {};
-    if(currentPage == 'about')
-        theme = {color: UiConf.info.regular}
-    else if(currentPage == 'works')
+    if(currentPage == 'works')
         theme = {color: UiConf.works.regular}
     else if(currentPage == 'lab')
         theme = {color: UiConf.lab.regular}
-    else if(currentPage == 'report')
-        theme = {color: UiConf.report.regular}
-    else if(currentPage == 'devlog')
-        theme = {color: UiConf.devlog.regular}
-    else if(currentPage == 'article')
-        theme = {color: UiConf.article.regular}
-    else if(currentPage == 'blog')
-        theme = {color: UiConf.blog.regular}
+    else if(currentPage == 'analysis')
+        theme = {color: UiConf.analysis.regular}
+    else if(currentPage == 'dev')
+        theme = {color: UiConf.dev.regular}
+    else if(currentPage == 'methods')
+        theme = {color: UiConf.methods.regular}
     return (
         <>
         <SHeaderWrap>

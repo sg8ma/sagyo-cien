@@ -1,38 +1,28 @@
 export const UiConf = {
     works: {
-        regular: '#51C6A0',
-        light: '',
+        regular: '#029cac',
+        light: '#01B9B2',
         dark: '',
     },
-    report: {
-        regular: '#FF9C69',
+    analysis: {
+        regular: '#b10101',
         light: '',
         dark: '',
     },
     lab: {
-        regular: '#E3D442',
+        regular: '#c80150',
         light: '',
         dark: '',
     },
-    devlog: {
-        regular: '#4FB2BC',
+    dev: {
+        regular: '#0472c8',
         regular_hover: '#6998c9',
         light: '#7aa3cf',
         light_hover: '#8aafd5',
         dark: '#47709c',
     },
-    article: {
-        regular: '#E3BE42',
-        light: '',
-        dark: '',
-    },
-    blog: {
-        regular: '#7CE140',
-        light: '',
-        dark: '',
-    },
-    info: {
-        regular: '#287aac',
+    methods: {
+        regular: '#b69200',
         light: '',
         dark: '',
     },

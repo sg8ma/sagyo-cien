@@ -119,7 +119,7 @@ const SReactMarkdown = styled(ReactMarkdown)`
         //     width:  16px;
         //     height:  16px; 
         //     display:  inline-block;
-        //     background-color: ${UiConf.devlog.light};
+        //     background-color: ${UiConf.dev.light};
         //     position:  relative;
         //     top: -1px;
         //     margin-right: 11px;
@@ -140,13 +140,13 @@ const SReactMarkdown = styled(ReactMarkdown)`
             // border-style: solid;
             // border-right: 8px solid transparent;
             // border-left: 8px solid transparent;
-            // border-top: 14px solid ${UiConf.devlog.regular};
+            // border-top: 14px solid ${UiConf.dev.regular};
             // border-bottom: 0;
             // content:  ""; 
             // width:  12px;
             // height:  12px; 
             // display:  inline-block;
-            // background-color: ${UiConf.devlog.regular};
+            // background-color: ${UiConf.dev.regular};
             // position:  relative;
             // top: -1px;
             // margin-right: 11px;
@@ -162,7 +162,7 @@ const SReactMarkdown = styled(ReactMarkdown)`
             // width:  4px;
             // height:  14px; 
             // display:  inline-block;
-            // background-color: ${UiConf.devlog.regular};
+            // background-color: ${UiConf.dev.regular};
             // position:  relative;
             // top: -1px;
             // margin-right: 11px;
@@ -185,7 +185,7 @@ const SReactMarkdown = styled(ReactMarkdown)`
             width:  6px;
             height:  6px; 
             display:  inline-block;
-            // background-color: ${UiConf.devlog.light};
+            // background-color: ${UiConf.dev.light};
             background-color: #222;
             border-radius:  50%;
             position:  relative;
@@ -200,7 +200,7 @@ const SReactMarkdown = styled(ReactMarkdown)`
         width: auto;
         margin: 1.5em auto;
         thead {
-            background: ${UiConf.devlog.light};
+            background: ${UiConf.dev.light};
             padding: 0.3em 1.0em;
                 th {
                     vertical-align: bottom;

@@ -12,20 +12,16 @@ export const Badge = ({
   }: Props) => {
 
     var theme = {};
-    if(menu == 'about')
-        theme = {color: UiConf.info.regular}
-    else if(menu == 'works')
+    if(menu == 'works')
         theme = {color: UiConf.works.regular}
     else if(menu == 'lab')
         theme = {color: UiConf.lab.regular}
-    else if(menu == 'report')
-        theme = {color: UiConf.report.regular}
-    else if(menu == 'devlog')
-        theme = {color: UiConf.devlog.regular}
-    else if(menu == 'article')
-        theme = {color: UiConf.article.regular}
-    else if(menu == 'blog')
-        theme = {color: UiConf.blog.regular}
+    else if(menu == 'analysis')
+        theme = {color: UiConf.analysis.regular}
+    else if(menu == 'dev')
+        theme = {color: UiConf.dev.regular}
+    else if(menu == 'methods')
+        theme = {color: UiConf.methods.regular}
     return (
         <>
             

@@ -17,7 +17,7 @@ export const LinkText = ({
     const [document, setDocument] = useState(null);
     useEffect(() => {
       async function loadMarkdown() {
-        const data = await import(`/tests/md/article/${category}/${slug}.md`);
+        const data = await import(`/tests/md/${menu}/${category}/${slug}.md`);
         const doc = matter(data.default);
         setDocument(doc);
       }
@@ -25,20 +25,16 @@ export const LinkText = ({
     }, []);  // categoryやslugが変更された時に再読込
     console.log(document)
     var theme = {};
-    if(menu == 'about')
-        theme = {color: UiConf.info.regular}
-    else if(menu == 'works')
+    if(menu == 'works')
         theme = {color: UiConf.works.regular}
     else if(menu == 'lab')
         theme = {color: UiConf.lab.regular}
-    else if(menu == 'report')
-        theme = {color: UiConf.report.regular}
-    else if(menu == 'devlog')
-        theme = {color: UiConf.devlog.regular}
-    else if(menu == 'article')
-        theme = {color: UiConf.article.regular}
-    else if(menu == 'blog')
-        theme = {color: UiConf.blog.regular}
+    else if(menu == 'analysis')
+        theme = {color: UiConf.analysis.regular}
+    else if(menu == 'dev')
+        theme = {color: UiConf.dev.regular}
+    else if(menu == 'methods')
+        theme = {color: UiConf.methods.regular}
     return (
         <>
             
@@ -65,7 +61,7 @@ const SList = styled.li `
         width:  6px;
         height:  6px; 
         display:  inline-block;
-        // background-color: ${UiConf.devlog.light};
+        // background-color: ${UiConf.dev.light};
         background-color: #222;
         border-radius:  50%;
         position:  relative;

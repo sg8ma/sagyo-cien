@@ -26,20 +26,17 @@ export const SideIndex = ({
     contents,
   }: Props) => {
     var theme = {};
-    if(currentMenu == 'about')
-        theme = {color: UiConf.info.regular}
-    else if(currentMenu == 'works')
+    if(currentMenu == 'works')
         theme = {color: UiConf.works.regular}
     else if(currentMenu == 'lab')
         theme = {color: UiConf.lab.regular}
-    else if(currentMenu == 'report')
-        theme = {color: UiConf.report.regular}
-    else if(currentMenu == 'devlog')
-        theme = {color: UiConf.devlog.regular}
-    else if(currentMenu == 'article')
-        theme = {color: UiConf.article.regular}
-    else if(currentMenu == 'blog')
-        theme = {color: UiConf.blog.regular}
+    else if(currentMenu == 'analysis')
+        theme = {color: UiConf.analysis.regular}
+    else if(currentMenu == 'dev')
+        theme = {color: UiConf.dev.regular}
+    else if(currentMenu == 'methods')
+        theme = {color: UiConf.methods.regular}
+
     const categories: string[] = [...new Set(contents.map((content: any) => content.category))];
     const sideIndexes = () => {
         var data: { category: string, posts: { url: string, title: string }[] }[] = [];
@@ -132,7 +129,7 @@ const SAccordionSubItemButton = styled.a`
     display: block;
     font-size: 16px;
     padding: 8px 20px 8px 20px;
-    background-color: ${UiConf.devlog.light};
+    background-color: ${UiConf.dev.light};
 `
 
 export default SideIndex

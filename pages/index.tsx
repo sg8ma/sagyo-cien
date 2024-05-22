@@ -11,7 +11,7 @@ export const CollectionPage = (props: Props) => {
     const currentMenu = 'works';
     const currentCategory = '';
     const pageTitle = 'Works';
-    const pageDescription = '作品';
+    const pageDescription = '作品の紹介';
     return (
         <Collection 
             currentMenu={currentMenu}

@@ -12,20 +12,16 @@ export const Header = ({
     currentMenu,
   }: Props) => {
     var theme = {};
-    if(currentMenu == 'about')
-        theme = {color: UiConf.info.regular}
-    else if(currentMenu == 'works')
+    if(currentMenu == 'works')
         theme = {color: UiConf.works.regular}
     else if(currentMenu == 'lab')
         theme = {color: UiConf.lab.regular}
-    else if(currentMenu == 'report')
-        theme = {color: UiConf.report.regular}
-    else if(currentMenu == 'devlog')
-        theme = {color: UiConf.devlog.regular}
-    else if(currentMenu == 'article')
-        theme = {color: UiConf.article.regular}
-    else if(currentMenu == 'blog')
-        theme = {color: UiConf.blog.regular}
+    else if(currentMenu == 'analysis')
+        theme = {color: UiConf.analysis.regular}
+    else if(currentMenu == 'dev')
+        theme = {color: UiConf.dev.regular}
+    else if(currentMenu == 'methods')
+        theme = {color: UiConf.methods.regular}
     return (
         <>
             <SAside>
@@ -49,7 +45,7 @@ export const Header = ({
                 </SPickupContent> */}
                 {/* <SAdsTitle></SAdsTitle> */}
                 <SAds src="https://placehold.jp/270x90.png"></SAds>
-                <SAds src="https://placehold.jp/270x180.png"></SAds>
+                <SAds src="https://placehold.jp/270x90.png"></SAds>
                 <SAds src="https://placehold.jp/270x90.png"></SAds>
                 <SAds src="https://placehold.jp/270x90.png"></SAds>
                 </SAsideContent>
@@ -119,7 +115,7 @@ const SPickupTag = styled.div`
 
 const SAdsTitle = styled.div`
     font-size: 24px;
-    color: ${UiConf.devlog.regular};
+    color: ${UiConf.dev.regular};
     margin-top: 32px;
     margin-bottom: 12px;
 `;
