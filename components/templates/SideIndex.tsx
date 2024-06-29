@@ -67,7 +67,7 @@ export const SideIndex = ({
             <SAside theme={theme}>
                 <SAsideContent>
                     <SIndex>
-                    <Link href={`/${currentMenu}`}>Index</Link>
+                    <Link href={`/${currentMenu}`}>目次</Link>
                     </SIndex>
                     <Accordion allowZeroExpanded preExpanded={[currentCategory]}>
                         {sideIndexes().map((content: any, index: number) => {
@@ -101,8 +101,11 @@ const SIndex = styled.div`
 
 const SAside = styled.aside`
     position: relative;
-    background-color: ${({theme}) => theme.color};
-    color: #ffffff;
+    overflow-y: scroll;
+    // background-color: ${({theme}) => theme.color};
+    // color: #ffffff;
+    background-color: #f6f6f6;
+    color: #000;    
     width: 320px;
     max-width: 320px;
     z-index: 1;

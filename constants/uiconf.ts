@@ -22,7 +22,7 @@ export const UiConf = {
         dark: '#47709c',
     },
     methods: {
-        regular: '#b69200',
+        regular: '#1bbc5b',
         light: '',
         dark: '',
     },

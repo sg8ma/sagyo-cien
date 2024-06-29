@@ -25,9 +25,9 @@ export const Footer = ({
         <SFooterWrap theme={theme}>
             <SFooter>
                 <SAds>
-                <img src="https://placehold.jp/600x200.png"></img>
+                <img src={'/images/banner04.jpg'}></img>
                 </SAds>
-                <SCopyright>© 2024 Sashiatari <p style={{'color': '#c8c8c8'}}></p></SCopyright>
+                <SCopyright>© 差し当たり  All Rights Reserved.<p style={{'color': '#c8c8c8'}}></p> </SCopyright>
             </SFooter>
         </SFooterWrap>
         </>
@@ -35,7 +35,11 @@ export const Footer = ({
 }
 
 const SAds = styled.div`
-    margin: 20px 0;
+    margin: 20px 0 0;
+    img {
+        width: 600px !important;
+        height: 200px !important;
+    }
 `
 
 const SCopyright = styled.div`
@@ -44,7 +48,8 @@ const SCopyright = styled.div`
 `
 
 const SFooterWrap = styled.footer`
-    background-color:  #c8c8c8;
+background-color: #f6f6f6;
+
     color: #eeeeee;
     position: absolute;
     bottom: 0;

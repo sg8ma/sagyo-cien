@@ -2,6 +2,7 @@ import styled from "styled-components"
 import matter from "gray-matter"
 import ThreeColLayout from '@/components/templates/ThreeColLayout';
 import Card from '@/components/elements/Card';
+import Card02 from '@/components/elements/Card02';
 import Sidebar from '@/components/templates/Sidebar';
 import SideIndex from '@/components/templates/SideIndex';
 import { UiConf } from '@/constants/uiconf'
@@ -39,7 +40,7 @@ export const Collection = ({
                         <SPageDesc>{pageDescription}</SPageDesc>
                         <SCardGroup>
                         {contents.map((content: any, index: number) => (
-                            <Card 
+                            <Card02 
                                 index={index}
                                 menu={currentMenu}
                                 category={content.category}

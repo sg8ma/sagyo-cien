@@ -76,7 +76,7 @@ const SContents = styled.div`
 const SContentsBody = styled.div`
     padding-top: 24px;
     padding-bottom: 16px;
-    width: 690px;
+    width: 840px;
     margin: 0 auto;
     margin-bottom: 300px;
 `;
@@ -111,6 +111,7 @@ const SReactMarkdown = styled(ReactMarkdown)`
         font-size: 28px;
         line-height: 1.4;
         margin: 48px 0 24px;
+        letter-spacing: 0.07em;
         // padding-bottom: 0.2em;
         padding-bottom: 0.2em;
         box-shadow: 0px 3px 2px -2px rgba(0, 0, 0, 0.15);
@@ -126,9 +127,10 @@ const SReactMarkdown = styled(ReactMarkdown)`
         // }
     }
     h3 {
-        font-size: 25px;
+        font-size: 23px;
         line-height: 1.4;
-        margin: 32px 0 24px;
+        margin: 32px 0 16px;
+        letter-spacing: 0.09em;
         position:relative;
         &:before {
             // content:  ""; 
@@ -154,9 +156,10 @@ const SReactMarkdown = styled(ReactMarkdown)`
         }
     }
     h4 {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 1.4;
-        margin: 32px 0 24px;
+        margin: 32px 0 16px;
+        letter-spacing: 0.1em;
         &:before {
             // content:  ""; 
             // width:  4px;
@@ -172,6 +175,7 @@ const SReactMarkdown = styled(ReactMarkdown)`
     p {
         font-size: 16px;
         line-height: 1.8;
+        letter-spacing: 0.11em;
     }
     ul {
         margin: 16px 0;

@@ -17,7 +17,7 @@ interface Props {
     created_at: string,
 }
 
-export const Card = ({
+export const Card02 = ({
     menu,
     index,
     category,
@@ -43,17 +43,17 @@ export const Card = ({
         <SCardWrap>
             <Link href={`/${menu}/${category}/${slug}`}>
                 <SCard key={index}>
-                    <SCategoryWrap>
-                        <SCategoryBg theme={theme}></SCategoryBg>
-                        <SCategory>{category}</SCategory>
-                        </SCategoryWrap>
-                    <STitleWrap>
-                        <STitle>{title}</STitle>
-                    </STitleWrap>
+
                     <SThumbnail src={thumbnailPath}></SThumbnail>
                     <SDateWrap>
-                        <SDate><SFontAwesomeIcon icon={faCalendar} />{format(created_at, 'yyyy/MM/dd')}</SDate>
+                        <SDate>{format(created_at, 'yyyy/MM/dd')}</SDate>
                     </SDateWrap>
+                    <STitleWrap>
+                        <STitle theme={theme}>{title}</STitle>
+                    </STitleWrap>
+                    <SCategoryWrap>
+                        <SCategoryBg theme={theme}>{category}</SCategoryBg>
+                    </SCategoryWrap>
                 </SCard>
             </Link>
         </SCardWrap>
@@ -61,12 +61,12 @@ export const Card = ({
 }
 
 const SCategoryBg = styled.div`
-    position: relative;
-    z-index: 0;
     background: ${({theme}) => theme.color};
-    width: 256px;
-    height: 16px;
+    display: inline-block;
+    padding: 3px 5px;
     border-radius: 4px;
+    font-size: 12px;
+    color: white;
 `;
 
 SCategoryBg.defaultProps = {
@@ -98,6 +98,7 @@ const STitle = styled.h2`
     font-size: 20px;
     padding: 0 16px 0;
     line-height: 1.41;
+    color: ${({theme}) => theme.color};
 `;
 
 const STitleWrap = styled.div`
@@ -106,18 +107,19 @@ const STitleWrap = styled.div`
 `
 
 const SDateWrap = styled.div`
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: 4px;
+    // position: absolute;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+    // bottom: 4px;
 `;
 
 const SDate = styled.div`
-    font-size: 13px;
-    color: gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 15px;
+    padding: 0 0 0 15px;
+    // color: gray;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 `;
 
 const SFontAwesomeIcon = styled(FontAwesomeIcon)`
@@ -136,22 +138,23 @@ const SCard = styled.div`
 `;
 
 const SCategoryWrap = styled.div`
-    position: absolute;
-    display: block;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: -7px;
+    // position: absolute;
+    // display: block;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+    // top: -7px;
+    padding: 0 0 0 15px;
 `;
 
 const SCategory = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	margin: auto;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+	// margin: auto;
     font-size: 12px;
     color: white;
 `;
 
 
-export default Card
+export default Card02

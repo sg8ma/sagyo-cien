@@ -20,34 +20,34 @@ export const Header = ({
         theme = {color: UiConf.analysis.regular}
     else if(currentMenu == 'dev')
         theme = {color: UiConf.dev.regular}
-    else if(currentMenu == 'methods')
+    else if(currentMenu == 'method')
         theme = {color: UiConf.methods.regular}
     return (
         <>
             <SAside>
                 <SAsideContent>
-                <SProfile theme={theme}>Profile</SProfile>
+                <SProfile theme={theme}>自己紹介</SProfile>
                 <SProfileOverview >
                     <SProfileImg src={'/images/profile.jpg'}></SProfileImg>
                     <div>
-                        <SProfileId theme={theme}>@sg8ma</SProfileId>
+                        <SProfileId theme={theme}>杉山大知</SProfileId>
                         <SProfileJob>Webエンジニア</SProfileJob>
                     </div>
                 </SProfileOverview>
                 <SProfileDetail>
-                都内でWebサービスを作るフロントエンド兼バックエンドエンジニアです。
-                新規Webサービスの爆速立ち上げや、使いやすいSPAの開発が得意です。
+                東京都内でWebサービスを作るバックエンド兼フロントエンド技術者です。
+                新規Webサービスの立ち上げや使いやすいSPAの開発が得意です。
                 </SProfileDetail>
-                <SPickupTitle theme={theme}>Ads</SPickupTitle>
+                <SPickupTitle theme={theme}>広告</SPickupTitle>
                 {/* <SPickupContent>
                     <SPickupTag>#php</SPickupTag>
                     <SPickupTag>#markdown</SPickupTag>
                 </SPickupContent> */}
                 {/* <SAdsTitle></SAdsTitle> */}
-                <SAds src="https://placehold.jp/270x90.png"></SAds>
-                <SAds src="https://placehold.jp/270x90.png"></SAds>
-                <SAds src="https://placehold.jp/270x90.png"></SAds>
-                <SAds src="https://placehold.jp/270x90.png"></SAds>
+                <SAds src={'/images/banner01.png'} height="90"></SAds>
+                <SAds src={'/images/banner02.jpg'} height="90"></SAds>
+                <SAds src={'/images/banner03.jpg'} height="90"></SAds>
+                {/* <SAds src={'/images/banner04.jpg'} height="90"></SAds> */}
                 </SAsideContent>
             </SAside>
         </>
@@ -58,6 +58,7 @@ export const Header = ({
 const SAside = styled.aside`
 position: relative;
     background-color: #f0f0f0;
+    // background-color: #f6f6f6;
     width: 320px;
     z-index: 1;
 `;
@@ -122,8 +123,8 @@ const SAdsTitle = styled.div`
 
 const SAds = styled.img`
     margin-bottom: 16px;
-    // width: 270px;
-    // height: 88px;
+    width: 270px !important;
+    height: 88px !important;
 `
 
 

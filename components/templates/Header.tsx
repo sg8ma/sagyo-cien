@@ -29,7 +29,7 @@ export const Header = ({
         <SHeaderWrap>
             <SHeader theme={theme}>
                 <SLeftArea theme={theme}>
-                <Link href={`/`}><strong>サシアタリ</strong></Link>
+                <Link href={`/`}><strong>差し当たり</strong></Link>
                 </SLeftArea>
 
                 <SRightArea>
@@ -59,6 +59,8 @@ const SHeader = styled.div`
     // background-color: #ffffff;
     // background: linear-gradient(45deg, #222 50%, #444);
     background-color: ${({theme}) => theme.color};
+    background-color: rgb(255 255 255/1);
+    background-color: rgb(35 39 47 / 1);
     display: flex;
     justify-content: space-between;
 `;
@@ -73,7 +75,7 @@ const SLeftArea = styled.div`
     margin: 16px 16px;
     color: ${({theme}) => theme.color};
     strong {
-        font-size: 21px;
+        font-size: 13px;
         color: ${({theme}) => theme.color};
         color: #eeeeee;
     }
